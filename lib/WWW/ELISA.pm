@@ -14,8 +14,6 @@ sub new {
     my $class = shift;
     my %args  = (
         endpoint => 'https://elisa.hbz-nrw.de:8091/api/rest',
-        callerID => 'https://xkcd.com',
-        secret   => 'info.0.json',
         @_,
     );
 
@@ -116,11 +114,25 @@ WWWW::ELISA - a module for working the the REST API ELi:SA (https://elisa.hbz-nr
 
 =head1 METHODS
 
-=head2 new()
+=head2 new($opts)
 
 =item * endpoint
 
+Optional. Default is to https://elisa.hbz-nrw.de:8091/api/rest
+
+=item * callerID
+
+Required.
+
+=item * secret
+
+Required.
+
 =back
+
+=head2 push($data)
+
+Pushes the notepad data to ELi:SA.
 
 =head1 AUTHOR
 
