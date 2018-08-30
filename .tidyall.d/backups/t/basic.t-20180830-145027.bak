@@ -1,0 +1,54 @@
+use strict;
+use warnings FATAL => "all";
+use Test::More;
+use Test::Exception;
+use WWW::ELISA;
+
+my $pkg;
+BEGIN {
+    $pkg = "WWW::ELISA";
+    use_ok $pkg;
+}
+require_ok $pkg;
+
+lives_ok { $pkg->new(callerID => "User1", secret => "s3cret") };
+
+# my $api = $pkg->new(callerID => "User1", secret => "s3cret");
+my $api = $pkg->new(callerID => 'ULBDuesseldorf', secret => 'hpbnxnOYrNDZmxc7TKzp');
+can_ok $api, "push";
+
+my $notepad = {
+  userID => 'vitali.peil@uni-bielefeld.de',
+  notepadName => "TEST_" . date(),
+  titleList => [
+  {
+        title => {
+                    isbn => "9780822363804",
+                    notiz => "WWW::ELISA Test",
+                }
+            }
+        ]
+    };
+
+ok $api->push($notepad);
+
+done_testing;
+
+__END__
+
+# my $callerID = 'ULBDuesseldorf';
+# my $secret   = 'hpbnxnOYrNDZmxc7TKzp';
+
+
+my $notepad = {
+        userID => $config->{subject}->{lc $d->{Fachgebiet}}->{mail},
+        notepadName => "AV_" . date(),
+        titleList => [
+            {
+                title => {
+                    isbn => $d->{ISBN},
+                    notiz => $d->{Anmerkungen},
+                }
+            }
+        ]
+    };
