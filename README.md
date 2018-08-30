@@ -1,14 +1,43 @@
 # NAME
 
-WWW::ELISA - Blah blah blah
+WWWW::ELISA - a module for working the the REST API ELi:SA (https://elisa.hbz-nrw.de/)
 
 # SYNOPSIS
 
-    use WWW::ELISA;
+    use WWWW::Elisa;
 
-# DESCRIPTION
+    my $api = WWW::ELISA->new(callerID => "user1", secret => "s3cret");
 
-WWW::ELISA is
+    my $data = {
+        userID      => 'me@example.com',
+        notepadName => "Wishlist_1",
+        titleList => [
+            {title => {isbn => "9780822363804", notiz => "WWW::ELISA Test",}},
+            {title => {isbn => "9788793379312", notiz => "WWW::ELISA Test2",}}
+        ];
+    }
+
+    $api->push($data);
+
+# METHODS
+
+## new($opts)
+
+- endpoint
+
+    Optional. Default is to https://elisa.hbz-nrw.de:8091/api/rest
+
+- callerID
+
+    Required.
+
+- secret
+
+    Required.
+
+## push($data)
+
+Pushes the notepad data to ELi:SA.
 
 # AUTHOR
 
