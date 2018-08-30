@@ -116,6 +116,8 @@ WWWW::ELISA - a module for working the the REST API ELi:SA (https://elisa.hbz-nr
 
 =head2 new($opts)
 
+=over
+
 =item * endpoint
 
 Optional. Default is to https://elisa.hbz-nrw.de:8091/api/rest
