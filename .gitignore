@@ -8,3 +8,4 @@ MYMETA.*
 xt/*
 local/*
 cpanfile.snapshot
+.tidyall.d/*
