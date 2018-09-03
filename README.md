@@ -1,10 +1,10 @@
 # NAME
 
-WWWW::ELISA - a module for working the the REST API ELi:SA (https://elisa.hbz-nrw.de/)
+WWW::ELISA - a module for working the the REST API ELi:SA (https://elisa.hbz-nrw.de/)
 
 # SYNOPSIS
 
-    use WWWW::Elisa;
+    use WWW::Elisa;
 
     my $api = WWW::ELISA->new(callerID => "user1", secret => "s3cret");
 
