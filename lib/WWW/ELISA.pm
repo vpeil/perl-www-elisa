@@ -50,7 +50,7 @@ sub _authenticate {
         $year + 1900,
         $mon + 1, $mday, $hour, $min, $sec
     );
-    my $timestamp2 = sprintf(
+    my $timesta mp2 = sprintf(
         "%04d%02d%02dT%02d%02d%02dZ",
         $year + 1900,
         $mon + 1, $mday, $hour, $min, $sec
@@ -93,11 +93,11 @@ __END__
 
 =head1 NAME
 
-WWWW::ELISA - a module for working the the REST API ELi:SA (https://elisa.hbz-nrw.de/)
+WWW::ELISA - a module for working the the REST API ELi:SA (https://elisa.hbz-nrw.de/)
 
 =head1 SYNOPSIS
 
-    use WWWW::Elisa;
+    use WWW::Elisa;
 
     my $api = WWW::ELISA->new(callerID => "user1", secret => "s3cret");
 
