@@ -12,10 +12,10 @@ WWWW::ELISA - a module for working the the REST API ELi:SA (https://elisa.hbz-nr
         userID      => 'me@example.com',
         notepadName => "Wishlist_1",
         titleList => [
-            {title => {isbn => "9780822363804", notiz => "WWW::ELISA Test",}},
-            {title => {isbn => "9788793379312", notiz => "WWW::ELISA Test2",}}
+            {title => {isbn => "9780822363804", notiz => "WWW::ELISA Test"}},
+            {title => {isbn => "9788793379312", notiz => "WWW::ELISA Test2"}},
         ];
-    }
+    };
 
     $api->push($data);
 
