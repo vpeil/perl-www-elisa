@@ -13,7 +13,7 @@ use Try::Tiny;
 
 sub new {
     my $class = shift;
-    my %args = (endpoint => 'https://elisa.hbz-nrw.de:8091/api/rest', @_,);
+    my %args  = (endpoint => 'https://elisa.hbz-nrw.de:8091/api/rest', @_,);
 
     return bless {%args}, $class;
 }
@@ -29,10 +29,10 @@ sub create_notepad {
     my ($self, $notepad) = @_;
 
     my $data = {
-        userID      => $notepad->{userID},
-        token       => $self->_authenticate(),
-        notepadName => $notepad->{notepadName},
-        titleList   => $notepad->{titleList},
+        userID         => $notepad->{userID},
+        token          => $self->_authenticate(),
+        notepadName    => $notepad->{notepadName},
+        titleList      => $notepad->{titleList},
         available_only => $notepad->{available_only} // "false",
     };
 
@@ -43,10 +43,10 @@ sub create_basket {
     my ($self, $notepad) = @_;
 
     my $data = {
-        userID      => $notepad->{userID},
-        token       => $self->_authenticate(),
-        notepadName => $notepad->{notepadName},
-        titleList   => $notepad->{titleList},
+        userID         => $notepad->{userID},
+        token          => $self->_authenticate(),
+        notepadName    => $notepad->{notepadName},
+        titleList      => $notepad->{titleList},
         available_only => $notepad->{available_only} // "false",
     };
 
