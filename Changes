@@ -2,6 +2,10 @@ Revision history for WWW-ELISA
 
 {{$NEXT}}
 
+0.06  2021-09-21 15:28:12 CEST
+    - new method create_basket
+    - new option available_only
+
 0.05  2018-09-07 20:13:01 CEST
     - make requests fault tolerant
 

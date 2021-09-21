@@ -15,9 +15,12 @@ WWW::ELISA - a module for working the the REST API ELi:SA (https://elisa.hbz-nrw
             {title => {isbn => "9780822363804", notiz => "WWW::ELISA Test", notiz_intern => "Info"}},
             {title => {isbn => "9788793379312", notiz => "WWW::ELISA Test2", notiz_intern => "Info2"}},
         ],
+        available_only => "true", # optional
     };
 
-    $api->push($data);
+    $api->create_notepad($data);
+    # or
+    $api->create_basket($data);
 
 # METHODS
 
