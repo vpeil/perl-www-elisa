@@ -9,3 +9,5 @@ MYMETA.*
 cpanfile.snapshot
 local/*
 xt/*
+t/*.cgi
+av_config*
