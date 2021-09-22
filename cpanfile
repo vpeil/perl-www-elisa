@@ -1,4 +1,4 @@
-requires 'perl', '5.008005';
+requires 'perl', '5.12';
 
 # requires 'Some::Module', 'VERSION';
 
